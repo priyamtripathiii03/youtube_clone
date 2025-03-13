@@ -1,7 +1,6 @@
-// main.dart
-
 import 'package:flutter/material.dart';
 import 'package:youtube_clone/screens/home_page.dart';
+import 'package:youtube_clone/screens/splash_screen.dart';
 
 
 void main() {
@@ -14,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'YouTube Clone',
-      home: YouTubeHome(),
+     routes: {
+        '/': (context)=> SplashScreen(),
+       'home':(context)=> YouTubeHome(),
+     },
     );
   }
 }
