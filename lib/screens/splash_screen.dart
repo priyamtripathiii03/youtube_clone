@@ -4,10 +4,10 @@ import 'package:youtube_clone/screens/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();

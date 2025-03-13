@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
 import 'package:http/http.dart' as http;
 import 'package:youtube_clone/screens/video_player_screen.dart';
 import 'package:youtube_clone/screens/video_search.dart';
 import 'dart:convert';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import '../modal/modals.dart';
 
 
@@ -14,10 +12,10 @@ const String BASE_URL = 'https://www.googleapis.com/youtube/v3/search?part=snipp
 
 class YouTubeHome extends StatefulWidget {
   @override
-  _YouTubeHomeState createState() => _YouTubeHomeState();
+  YouTubeHomeState createState() => YouTubeHomeState();
 }
 
-class _YouTubeHomeState extends State<YouTubeHome> {
+class YouTubeHomeState extends State<YouTubeHome> {
   List<VideoModel> videos = [];
   TextEditingController searchController = TextEditingController();
 
