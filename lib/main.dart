@@ -1,5 +1,8 @@
+// main.dart
+
 import 'package:flutter/material.dart';
 import 'package:youtube_clone/screens/home_page.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -10,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'YouTube Clone',
       home: YouTubeHome(),
     );
   }

@@ -1,24 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:http/http.dart' as http;
+import 'package:youtube_clone/screens/video_player_screen.dart';
+import 'package:youtube_clone/screens/video_search.dart';
 import 'dart:convert';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import '../modal/modals.dart';
 
-class VideoModel {
-  final String videoId;
-  final String title;
-  final String thumbnail;
-
-  VideoModel({required this.videoId, required this.title, required this.thumbnail});
-
-  factory VideoModel.fromJson(Map<String, dynamic> json) {
-    return VideoModel(
-      videoId: json['id']['videoId'],
-      title: json['snippet']['title'],
-      thumbnail: json['snippet']['thumbnails']['high']['url'],
-    );
-  }
-}
 
 const String API_KEY = 'AIzaSyDUj1q4U1E2AxCReqYgyTgB05eyDOilz94';
 const String CHANNEL_ID = 'UC_x5XG1OV2P6uZZ5FSM9Ttw';
@@ -131,82 +119,6 @@ class _YouTubeHomeState extends State<YouTubeHome> {
               ),
             );
           },
-        ),
-      ),
-    );
-  }
-}
-
-class VideoSearch extends SearchDelegate {
-  final Function(String) fetchVideos;
-
-  VideoSearch(this.fetchVideos);
-
-  @override
-  List<Widget>? buildActions(BuildContext context) {
-    return [
-      IconButton(
-        icon: Icon(Icons.clear),
-        onPressed: () {
-          query = '';
-        },
-      ),
-    ];
-  }
-
-  @override
-  Widget? buildLeading(BuildContext context) {
-    return IconButton(
-      icon: Icon(Icons.arrow_back),
-      onPressed: () {
-        close(context, null);
-      },
-    );
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-    fetchVideos(query);
-    return Center(child: CircularProgressIndicator());
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    return Container();
-  }
-}
-
-class VideoPlayerScreen extends StatefulWidget {
-  final String videoId;
-  VideoPlayerScreen({required this.videoId});
-
-  @override
-  _VideoPlayerScreenState createState() => _VideoPlayerScreenState();
-}
-
-class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
-  late YoutubePlayerController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = YoutubePlayerController(
-      initialVideoId: widget.videoId,
-      flags: YoutubePlayerFlags(
-        autoPlay: true,
-        mute: false,
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Video Player')),
-      body: Center(
-        child: YoutubePlayer(
-          controller: _controller,
-          showVideoProgressIndicator: true,
         ),
       ),
     );
