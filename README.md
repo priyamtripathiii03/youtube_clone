@@ -66,3 +66,15 @@ The **YouTube Clone App** is a powerful video streaming platform that lets users
 🎬 Build your own YouTube-like platform & revolutionize video content! 💡  
 
 Want the source code? Let me know! 🚀
+
+
+
+<p>
+    <img src="https://github.com/user-attachments/assets/3157dc97-0933-47b1-b9da-aad3d4507c5b"height="35%" width="22%">
+      <img src="https://github.com/user-attachments/assets/420aff3e-7e39-487f-9067-752207c03119"height="35%" width="22%">
+        <img src="https://github.com/user-attachments/assets/17e9598d-2c71-497c-b083-1973f746dc8f"height="35%" width="22%">
+          <img src="https://github.com/user-attachments/assets/e2cb8a5d-f9df-4c0b-b441-77392bf18a95"height="35%" width="22%">
+            <img src="https://github.com/user-attachments/assets/e8ad4b48-2d1d-4444-a8c2-4c63d8c4b6e9"height="35%" width="22%">
+               <img src="https://github.com/user-attachments/assets/76bdfc54-a1fe-46da-a3b0-18eee503c46d"height="35%" width="22%">
+                 <img src="https://github.com/user-attachments/assets/d9ef090f-a2a5-4643-8b58-5ef5d419e3ac"height="35%" width="22%">
+   
